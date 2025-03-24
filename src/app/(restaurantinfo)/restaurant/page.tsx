@@ -1,11 +1,11 @@
 "use client";
 
-import VenueCatalog from "@/components/VenueCatalog";
+import RestaurantCatalog from "@/components/RestaurantCatalog";
 import getRestaurants from "@/libs/getRestaurants";
 import { LinearProgress } from "@mui/material";
 import React, { Suspense } from "react";
 
-export default function VenuesPage() {
+export default function RestaurantsPage() {
   const restaurantPromise = getRestaurants();
 
   return (
@@ -18,7 +18,7 @@ export default function VenuesPage() {
           </p>
         }
       >
-        <VenueCatalog restaurantsJson={restaurantPromise} />
+        <RestaurantCatalog restaurantsJson={restaurantPromise} />
       </Suspense>
     </main>
   );

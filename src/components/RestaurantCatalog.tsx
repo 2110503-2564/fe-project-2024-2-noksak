@@ -3,7 +3,7 @@ import React from 'react'
 import Card from './Card'
 import { RestaurantItem, RestaurantJson } from '../../interface'
 
-const VenueCatalog = async ({restaurantsJson}: {restaurantsJson: Promise<RestaurantJson>}) => {
+const RestaurantCatalog = async ({restaurantsJson}: {restaurantsJson: Promise<RestaurantJson>}) => {
   return (
     <section className="m-1 flex flex-wrap gap-2">
         {(await (restaurantsJson)).data.map((restaurant: RestaurantItem) => (
@@ -18,4 +18,4 @@ const VenueCatalog = async ({restaurantsJson}: {restaurantsJson: Promise<Restaur
   )
 }
 
-export default VenueCatalog
+export default RestaurantCatalog

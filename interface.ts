@@ -43,3 +43,16 @@ export interface RestaurantJson{
   count:number
   data:RestaurantItem[]
 }
+
+export interface ReservationJson{
+  success:boolean,
+  count:number
+  data:ReservationItem[]
+}
+
+export interface ReservationItem{
+  _id:string,
+  apptDate:string,
+  user:string,
+  restaurant:RestaurantItem
+}
