@@ -40,13 +40,18 @@ export interface RestaurantItem{
 
 export interface RestaurantJson{
   success:boolean,
-  count:number
+  count:number,
   data:RestaurantItem[]
+}
+
+export interface ReservationsJson{
+  success:boolean,
+  count:number,
+  data:ReservationItem[]
 }
 
 export interface ReservationJson{
   success:boolean,
-  count:number
   data:ReservationItem[]
 }
 

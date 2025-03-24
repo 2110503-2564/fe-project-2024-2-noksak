@@ -1,7 +1,7 @@
 import React from 'react'
-import { ReservationItem, ReservationJson } from '../../interface'
+import { ReservationItem, ReservationsJson } from '../../interface'
 
-const ReservationList = async ({reservationJson}: {reservationJson: Promise<ReservationJson>}) => {
+const ReservationList = async ({reservationJson}: {reservationJson: Promise<ReservationsJson>}) => {
 
     const reservationReady = await reservationJson;
 

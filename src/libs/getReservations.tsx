@@ -1,6 +1,6 @@
-import { ReservationJson } from "../../interface";
+import { ReservationsJson } from "../../interface";
 
-export default async function getReservations(token: string): Promise<ReservationJson> {
+export default async function getReservations(token: string): Promise<ReservationsJson> {
     return await fetch(
       "https://sw-project-backend-one.vercel.app/api/v1/reservations",
       {
