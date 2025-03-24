@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 
-export default function InteractiveCard({ children, venueName } : { children:React.ReactNode, venueName:string }) {
+export default function InteractiveCard({ children, Name } : { children:React.ReactNode, Name:string }) {
 
     function onCardMouseAction(event: React.SyntheticEvent) {
         if (event.type == 'mouseover') {
@@ -20,7 +20,7 @@ export default function InteractiveCard({ children, venueName } : { children:Rea
     }
 
     function onVenueSelected() {
-        alert(`You selected ${venueName}!`)
+        alert(`You selected ${Name}!`)
     }
 
     return (

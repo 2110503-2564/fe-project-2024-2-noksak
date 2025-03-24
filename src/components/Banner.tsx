@@ -28,7 +28,7 @@ export default function Banner() {
                     className="bg-white text-cyan-600 border border-cyan-600
                     font-semibold py-2 px-2 m-2 rounded z-30 absolute bottom-0 right-0
                     hover:bg-cyan-600 hover:text-white hover:border-transparent"
-                    onClick={() => router.push("/venue")} // เพิ่มการนำทางเมื่อคลิกปุ่ม
+                    onClick={() => router.push("/restaurant")} // เพิ่มการนำทางเมื่อคลิกปุ่ม
                 >
                     Select your Venue
                 </button>

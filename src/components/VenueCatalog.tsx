@@ -1,16 +1,16 @@
 import Link from 'next/link'
 import React from 'react'
 import Card from './Card'
+import { RestaurantItem, RestaurantJson } from '../../interface'
 
-const VenueCatalog = async ({venuesJson}: {venuesJson: Promise<VenueJson>}) => {
+const VenueCatalog = async ({restaurantsJson}: {restaurantsJson: Promise<RestaurantJson>}) => {
   return (
     <section className="m-1 flex flex-wrap gap-2">
-        {(await (venuesJson)).data.map((venue: VenueItem) => (
-          <Link href={`/venue/${venue.id}`} key={venue.id}>
+        {(await (restaurantsJson)).data.map((restaurant: RestaurantItem) => (
+          <Link href={`/restaurant/${restaurant._id}`} key={restaurant._id}>
             <Card
-              key={venue.id}
-              venueName={venue.name}
-              imgsrc={venue.picture}
+              key={restaurant._id}
+              restaurantName={restaurant.name}
             />
           </Link>
         ))}

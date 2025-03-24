@@ -25,3 +25,21 @@ interface BookingItem {
   venue: string;
   bookDate: string;
 }
+
+export interface RestaurantItem{
+  _id:string,
+  name:string,
+  address:string,
+  tel:string,
+  office_hours:{
+      open:string,
+      close:string,
+      tz:string
+  }
+}
+
+export interface RestaurantJson{
+  success:boolean,
+  count:number
+  data:RestaurantItem[]
+}

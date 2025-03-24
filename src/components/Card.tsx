@@ -4,20 +4,15 @@ import Image from 'next/image'
 import InteractiveCard from './InteractiveCard';
 import { Rating } from '@mui/material';
 
-export default function ProductCard({venueName,imgsrc,onRatingChange}:{venueName:string,imgsrc:string,onRatingChange?:Function}){
-    const pid = `${venueName} Rating`;
+export default function ProductCard({restaurantName,onRatingChange}:{restaurantName:string,onRatingChange?:Function}){
+    const pid = `${restaurantName} Rating`;
     return (
-        <InteractiveCard venueName={venueName}>
+        <InteractiveCard Name={restaurantName}>
             <div className="w-full h-[70%] relative">
-                <Image src = {imgsrc}
-                className='object-cover' 
-                alt = 'Product picture'
-                layout = "fill"
-                objectFit='cover'
-                />             
+                         
             </div>
 
-            <h2 className='font-semibold'>{venueName}</h2>
+            <h2 className='font-semibold'>{restaurantName}</h2>
            {/* <Rating
             id={pid}
             name ={pid}
