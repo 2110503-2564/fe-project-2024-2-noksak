@@ -3,11 +3,11 @@ import DateReserve from "@/components/DateReserve";
 import dayjs, { Dayjs } from "dayjs";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
-import addReservation from "@/libs/addReservation";
+import updateReservation from "@/libs/updateReservation";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
-export default function Reservations(){
+export default function EditReservations(){
 
     const {data:session}=useSession();
     if(!session) return <div>Please Login</div>;  
@@ -22,9 +22,9 @@ export default function Reservations(){
 
     const router=useRouter();
 
-    const makeReservation=async ()=>{
+    const editReservation=async ()=>{
         if(id&&reservationDate){
-            const reservationPromise=await addReservation(session.user.token,dayjs(reservationDate).toISOString(),id);
+            const reservationPromise=await updateReservation(session.user.token,dayjs(reservationDate).toISOString(),id);
             if(reservationPromise.success){
                 router.push('/myreservation')
             }
@@ -38,7 +38,7 @@ export default function Reservations(){
                 <div className="text-md text-left text-gray-600">Reservation Date</div>
                 <DateReserve onDateChange={(value:Dayjs)=>{setReservationDate(value)}}/>
             </div>
-            <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm" onClick={makeReservation}>Reserve</button>
+            <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm" onClick={editReservation}>save</button>
         </main>
     );
 }

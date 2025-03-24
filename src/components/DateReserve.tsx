@@ -5,7 +5,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Dayjs } from "dayjs";
 import { useState } from "react";
 
-const DateReserve = ({onDateChange}: {onDateChange: (date: Dayjs | null) => void}) => {
+const DateReserve = ({onDateChange}: {onDateChange:Function}) => {
   
   const [selectedDate, setSelectedDate] = useState<Dayjs | null>(null);
   
@@ -17,7 +17,6 @@ const DateReserve = ({onDateChange}: {onDateChange: (date: Dayjs | null) => void
         setSelectedDate(value);
         onDateChange(value);
       }}
-
       />
     </LocalizationProvider>
   );

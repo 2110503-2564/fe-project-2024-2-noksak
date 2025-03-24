@@ -23,7 +23,7 @@ export default async function restaurantDetailPage({ params }: { params: { id: s
               <span>●</span>
               <span>{restaurant.office_hours.open} - {restaurant.office_hours.close} {restaurant.office_hours.tz}</span>
             </div>
-            <Link href={`/reservations?id=${params.id}`}>
+            <Link href={`/reservation?id=${params.id}`}>
               <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-white shadow-sm">Make Reservation</button>
             </Link>
           </div>
