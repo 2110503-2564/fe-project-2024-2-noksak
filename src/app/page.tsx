@@ -21,9 +21,11 @@ export default function Home() {
           <p>
             Let's get started. start reservation now!
           </p>
+          <a href="/me/booking">  
           <Button variant="primary" className="mt-4" size="lg">
             Get Started
           </Button>
+          </a>
         </div>
       </section>
     </div>

@@ -7,7 +7,7 @@ const Banner: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-left">
                     <h1 className="text-6xl font-bold font-dela uppercase">Welcome to the Resturant Manager</h1>
                     <p className="text-lg">Manage your resturant with ease</p>
-                    <Button variant="outline">Get Started</Button>
+                    <a href="/me/booking"><Button variant="outline">Get Started</Button></a>
             </div>
         </div>
     );
